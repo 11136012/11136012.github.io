@@ -1,0 +1,131 @@
+/*套入 Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    box-sizing: border-box;/*解決區塊寬高問題*/
+}
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 20px; /* 调整页面外边距 */
+}
+
+.logo {
+    margin-right: auto; /* 将logo推到左边 */
+    display: flex;
+    align-items: center;
+    background-image: url(image/logo_econology.svg);
+}
+
+
+/* 其他样式保持不变 */
+
+div.wrap-all {
+    width: 80%;/*這個寬度要跟main-card的寬度一樣*/
+    margin: 16px auto;/*讓所有內容居中*/
+    align-items: center;
+}
+main.main-card {
+    width: 100%;
+    height: 700px;
+    margin-bottom: 16px;/*擠出 main 與 section 之間的空間*/
+    padding-top: 100px;/*把文字往下擠*/
+    padding-left: 50px;/*把文字往右擠*/
+    background-image: url(image/wy_duck.jpg);
+    background-size: cover;/*讓背景圖片寬度等於區塊寬度*/
+    border-radius: 16px;/*四周加上圓角*/
+    color: #FFF;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+    align-items: center;
+}
+div.main-text {
+    color: #EFEFEF;
+    padding-top: 10px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+div.card {
+    width: 80%;
+    height: 320px;
+    background-color:white;
+    border-radius: 16px;/*四周加上圓角*/
+    overflow: hidden;/*隱藏超出範圍的內容*/
+    align-items: center;
+}
+div.card-image {
+    width: 100%;
+    height: 80%;
+    padding-top: 60px;
+    padding-left: 0px;
+    background-size: cover;
+    text-align:center;
+    color: #FFF;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 16px;
+}
+div.card-intro {
+    padding: 16px 20px;
+    color: var(--Main-Color, #3E4936);
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 24px */
+    text-align:center;
+}
+/*以下為換圖設定*/
+div.offshore .card-image {
+    background-image: url(image/egg.jpg);
+}
+div.tidal .card-image {
+    background-image: url(image/y_duck.jpg);
+}
+div.solar .card-image {
+    background-image: url(image/w_duck.jpg);
+}
+div.card-button {
+    display: flex;
+    width: 270px;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: Montserrat;
+    text-align:center;
+    border: 2px gray solid;
+    border-radius: 20px;
+    color: var(--Main-Color, #3E4936);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+/*利用 CSS flexbox 語法讓小卡橫排*/
+section {
+    display: flex;
+    gap: 10px;
+}
+footer {
+    color: grey;
+    font-family: Inter;
+    font-size: 13px;
+    width: 100%;
+    height: 54px;
+    padding-top: 20px;
+    text-align:center;
+    background: #EFEFEF;
+}
