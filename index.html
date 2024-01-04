@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11136012 林憶臨</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
 </head>
 <body>
 <div class="wrap-all">
@@ -15,47 +19,82 @@
     <td height="50" align="center" valign="middle" bgcolor="#66FF99" class="f2"><marquee>
         歡迎來到鴨園，呱呱呱～
         </marquee></td>
+        
 </head>
-<body>
-<div class="wrap-all">
+<div class="wrap">
+        
+    <header>
+        <h1 class="logo"><a href="index.html"><image src="image/egg_logo.png"></a></h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#about">相片</a></li>
+                <li><a href="#news">生長過程</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!--主要卡片內容-->
-    <main class="main-card">
-    </main>
-<!--小卡片內容-->
-<section>
-    <div class="card offshore">
-        <div class="card-image"></div>
-        <div class="card-intro">
-            鴨蛋
+    <section id="about"><h2>相片</h2></section>
+        <div class="wrap-all">
+
+            <!--主要卡片內容-->
+            <div class="slider">
+                <div><img src="image/w_duck.jpg" alt=""></div>
+                <div><img src="image/y_duck.jpg" alt=""></div>
+                <div><img src="image/wy_duck.jpg" alt=""></div>
+                <div><img src="pimage/egg.jpg" alt=""></div>
+            
+            </div>
+              <script>
+                $(document).ready(function(){
+                  $(".slider").bxSlider(
+                    {
+                        auto: true,
+                        captions: false,
+                        slideWidth: 1000
+                    }
+                  );
+                });
+              </script>
         </div>
-        <div class="card-button" href="/index.html">
-            更多詳情
+
+
+    <section id="news"><h2>生長過程</h2></section>
+    <section2>
+
+        <div class="card offshore">
+            <div class="card-image"></div>
+            <div class="card-intro">
+                鴨蛋
+            </div>
+            <button class="card-button" onclick="location.href='https://www.jendow.com.tw/wiki/受精鴨蛋';">
+                更多詳情
+            </button>
         </div>
-    </div>
-    <div class="card tidal">
-        <div class="card-image"></div>
-        <div class="card-intro">
-            小鴨
+        <div class="card tidal">
+            <div class="card-image"></div>
+            <div class="card-intro">
+                小鴨
+            </div>
+            <button class="card-button" onclick="location.href='https://kknews.cc/zh-tw/agriculture/ve83mol.html';">
+                更多詳情
+            </button>
         </div>
-        <div class="card-button">
-            更多詳情
+        <div class="card solar">
+            <div class="card-image"></div>
+            <div class="card-intro">
+                成鴨
+            </div>
+            <button class="card-button" onclick="location.href='https://www.angrin.tlri.gov.tw/Breed_Res/Breed_50-52_h.htm';">
+                更多詳情
+            </button>
         </div>
-    </div>
-    <div class="card solar">
-        <div class="card-image"></div>
-        <div class="card-intro">
-            成鴨
-        </div>
-        <div class="card-button">
-            更多詳情
-        </div>
-    </div>
-</section>
+    </section2>
+</div>
+<body>
 
 </div>
 <footer>
-    © 2023 econergy company is not real. All Rights Reserved 
+    © 2024 11136012
 </footer>
 </body>
 </html>

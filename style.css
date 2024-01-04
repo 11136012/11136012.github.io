@@ -8,42 +8,22 @@
     box-sizing: border-box;/*解決區塊寬高問題*/
 }
 body {
+    font-family: 'Roboto', 'sans-serif';
+    width: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 20px; /* 调整页面外边距 */
+  /* 水平置中 */
+  justify-content: center;    
+  display: flex;  
+  /* 垂直置中 */
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(100, 91, 49);
 }
-
-.logo {
-    margin-right: auto; /* 将logo推到左边 */
-    display: flex;
-    align-items: center;
-    background-image: url(image/logo_econology.svg);
-}
-
-
-/* 其他样式保持不变 */
-
 div.wrap-all {
-    width: 80%;/*這個寬度要跟main-card的寬度一樣*/
+    width: 830px;/*這個寬度要跟main-card的寬度一樣*/
     margin: 16px auto;/*讓所有內容居中*/
-    align-items: center;
 }
-main.main-card {
-    width: 100%;
-    height: 700px;
-    margin-bottom: 16px;/*擠出 main 與 section 之間的空間*/
-    padding-top: 100px;/*把文字往下擠*/
-    padding-left: 50px;/*把文字往右擠*/
-    background-image: url(image/wy_duck.jpg);
-    background-size: cover;/*讓背景圖片寬度等於區塊寬度*/
-    border-radius: 16px;/*四周加上圓角*/
-    color: #FFF;
-    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
-    align-items: center;
-}
+
 div.main-text {
     color: #EFEFEF;
     padding-top: 10px;
@@ -54,16 +34,15 @@ div.main-text {
     line-height: normal;
 }
 div.card {
-    width: 80%;
-    height: 320px;
+    width: 275px;
+    height: auto;
     background-color:white;
     border-radius: 16px;/*四周加上圓角*/
     overflow: hidden;/*隱藏超出範圍的內容*/
-    align-items: center;
 }
 div.card-image {
     width: 100%;
-    height: 80%;
+    height: 150px;
     padding-top: 60px;
     padding-left: 0px;
     background-size: cover;
@@ -81,7 +60,7 @@ div.card-intro {
     padding: 16px 20px;
     color: var(--Main-Color, #3E4936);
     font-family: Inter;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 24px */
@@ -97,27 +76,49 @@ div.tidal .card-image {
 div.solar .card-image {
     background-image: url(image/w_duck.jpg);
 }
-div.card-button {
-    display: flex;
+button.card-button {
     width: 270px;
-    padding: 10px 15px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     font-family: Montserrat;
     text-align:center;
     border: 2px gray solid;
     border-radius: 20px;
     color: var(--Main-Color, #3E4936);
-    font-size: 15px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    width: 270px;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 9px #999;
 }
+
+button.button:hover {background-color: #3e8e41}
+
+button.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 /*利用 CSS flexbox 語法讓小卡橫排*/
-section {
+section2 {
     display: flex;
     gap: 10px;
+      /* 水平置中 */
+    justify-content: center;    
+    display: flex;  
+    /* 垂直置中 */
+    align-content: center;
+    flex-wrap: wrap;
 }
 footer {
     color: grey;
@@ -129,3 +130,77 @@ footer {
     text-align:center;
     background: #EFEFEF;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+    html {
+        scroll-behavior: smooth;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Anton', sans-serif;
+        margin: 0;
+    }
+    .wrap {
+        width: 940px;
+        margin: 20px auto;
+    }
+    h2 {
+        color: #344e41;
+        font-weight: normal;
+        margin: -5px 380px;
+        text-align: center;
+    }
+    section {
+        font-size: 20px;
+        width: 100%;
+        height: 50px;
+        padding: 10px 30px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        background-color: #dad7cd;
+
+    }
+    header {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0px 30px;
+        border-radius: 20px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;/*上下居中*/
+        position: sticky;
+        top: 20px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    }
+    header a {
+        color: #344e41;
+        display: block;
+        text-decoration: none;
+    }
+    header h1 {
+        margin-right: auto;/*讓 menu 到右邊去*/
+    }
+
+    ul.menu {
+        display: flex; /*讓選單橫排*/
+        list-style: none;/*清除圓點*/
+        margin: 0;/*清除 ul 額外空間*/
+        padding: 0;/*清除 ul 額外空間*/
+        gap: 12px;
+        font-size: 40px;
+    }
+    ul.menu a {
+        /*超連結的正常狀態*/
+        padding: 10px 20px;
+    }
+    ul.menu a:hover {
+        /*當滑鼠移上超連結時的狀態*/
+        background-color: #a3b18a;
+        border-radius: 20px;
+    }
+    logo{
+        height: 200px;
+    }
