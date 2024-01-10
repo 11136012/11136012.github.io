@@ -17,7 +17,7 @@ body {
   /* 垂直置中 */
   align-content: center;
   flex-wrap: wrap;
-  background-color: rgb(100, 91, 49);
+  background-color: rgb(185, 174, 125);
 }
 div.wrap-all {
     width: 830px;/*這個寬度要跟main-card的寬度一樣*/
